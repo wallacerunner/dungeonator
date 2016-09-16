@@ -1,11 +1,15 @@
+# Contains all definitions
+
+# Icon for window
+Icon = TkPhotoImage.new('file' => './dungeonator/icon.gif')
 
 # Using 8x8 characters
-$charw = 8
-$charh = 8
+Charw = 8
+Charh = 8
 
 # Text mode 80x60
-$txcols = 80
-$txrows = 60
+Txcols = 80
+Txrows = 60
 
 # ASCII Chars
-$acBlock = "█" # "\xDB".encode('utf-8')
+AcBlock = "█" # "\xDB".encode('utf-8')

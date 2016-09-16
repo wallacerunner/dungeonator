@@ -1,16 +1,20 @@
-# TODO: rewrite copyright (and possibly everything else) to use text in canvas
+# TODO: rewrite everything to use text in canvas
+# TODO: make copyright appear in the middle
+# TODO: extract draw_screen_from_pixels_array method
 
 require 'tk'
-require './dungeonator/defs'
+require_relative 'defs'
 
 def show_title
   root = TkRoot.new {
     title "Dungeon-inator!"
+    iconphoto Icon
     padx 0
     pady 0
     bg "black"
     minsize 640, 480
-    maxsize 640, 480
+    # maxsize 640, 480
+    resizable false, false
   }
 
   # Open file and draw lots of blocks with colors from it
@@ -20,20 +24,20 @@ def show_title
       color = "##{pix.read(6)}"
       pix.pos += 1
       TkLabel.new(root) do
-        text $acBlock
+        text AcBlock
         font size: 8
         fg color
         bd 0
         padx 0
         pady 0
-      end.place(x: (x * $charw), y: 472 - (y * $charh))
+      end.place(x: (x * Charw), y: 472 - (y * Charh))
     end
   end
 
   # Draw copyright
   copyright_text = "Created by WR (c) 2016"
-  copyright_location_x = ($txcols / 2 - copyright_text.length / 2) * $charw
-  copyright_location_y = ($txrows - 4) * $charh
+  copyright_location_x = (Txcols / 2 - copyright_text.length / 2) * Charw
+  copyright_location_y = (Txrows - 4) * Charh
   TkLabel.new(root) do
     text copyright_text
     fg 'yellow'
