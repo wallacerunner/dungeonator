@@ -1,4 +1,4 @@
-# TODO: extract draw_screen_from_pixels_array method
+# TODO: delete
 
 require 'tk'
 require_relative 'defs'

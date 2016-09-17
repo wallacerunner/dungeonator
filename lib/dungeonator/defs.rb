@@ -1,7 +1,7 @@
 # Contains all definitions
 
 # Icon for window
-Icon = TkPhotoImage.new('file' => './dungeonator/icon.gif')
+Icon = TkPhotoImage.new('file' => '../assets/icon.gif')
 
 # Font
 Font = TkFont.new('Fixedsys 8')
