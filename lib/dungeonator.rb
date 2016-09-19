@@ -1,4 +1,5 @@
-# TODO: break into separate pieces, split into files
+# TODO: break into separate pieces, split into files - maybe
+# TODO: make a class for interface
 
 # require "./dungeonator/title_tk"
 require 'tk'
@@ -34,7 +35,7 @@ screen = TkCanvas.new(root){
   end
 end
 
-Utils.draw_background("../assets/title", screen)
+Utils.draw_background("../assets/title.bmp", screen)
 
 copyright_text = "Created by WR (c) 2016"
 copyright_location_x = (Txcols / 2) * Charw
@@ -48,7 +49,7 @@ TkcText.new(
             fill: 'yellow',
             font: Font
 )
-sleep 5
-Utils.draw_background("../assets/menu", screen)
+# sleep 5
+Utils.draw_background("../assets/menu.bmp", screen)
 
 Tk.mainloop
