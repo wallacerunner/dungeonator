@@ -1,6 +1,5 @@
 # TODO: delete this file
 # TODO: try instance vars with modules
-# TODO: figure out how to switch between bindings (tk)
 
 require 'tk'
 $root = TkRoot.new {
