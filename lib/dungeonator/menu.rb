@@ -6,7 +6,7 @@ module Menu
     @menu_items.each_index do |index|
       text = @menu_items[index].capitalize
       x = Utils.centered_x(@menu_items[index])
-      y = (Txrows / 2 + 12 + index * 4) * Charh + 3
+      y = (Txrows / 2 + 12 + index * 4) * Charh
       if selected_index == index
         @screen.write(text, x, y, White)
       else
@@ -18,14 +18,14 @@ module Menu
   def self.menu(screen)
     @screen = screen
     screen.draw_background("../assets/menu.bmp")
-    text = "Dungeonator "
+    text = "Dungeonator!"
     x = Utils.centered_x(text)
     y = (Txrows / 2 + 4) * Charh
     screen.write(text, x + 1, y + 1, Black, 'bold')
     screen.write(text, x, y, Yellow, 'bold')
     text = "ver. #{Version}"
     x = Utils.centered_x(text)
-    y = (Txrows / 2 + 7) * Charh
+    y = (Txrows / 2 + 6) * Charh
     screen.write(text, x, y, Yellow)
 
     current_pos = 0

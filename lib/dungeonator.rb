@@ -1,3 +1,4 @@
+# TODO: disable numpad on start or implement support of it being on - it IS a keypress modifier
 
 require "./dungeonator/defs"
 require "./dungeonator/utils"
@@ -16,11 +17,11 @@ x = Utils.centered_x(text)
 y = (Txrows - 2) * Charh
 screen.write(text, x, y, Yellow)
 loop { break if screen.get_keypress == [13, 0] }
-screen.input("Enter your name:")
-sleep 10
+# sleep 10
 case selected_item = Menu.menu(screen)
 when 0
   # Start new game
+  screen.input("Enter your name:")
 when 1
   # Load saved game
 when 2

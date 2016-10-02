@@ -6,7 +6,7 @@ Version = "0.0.0"
 Icon = "../assets/icon.bmp"
 
 # Font
-Font = "../assets/unifont-9.0.02.ttf"
+Font = "../assets/PxPlus_IBM_BIOS.ttf"
 
 # Using 8x8 characters
 Charw = 8

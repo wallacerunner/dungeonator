@@ -26,4 +26,14 @@ class Character
     }
   end
 
+  def print_stats
+
+  end
+
+  private
+
+    def generate_character
+
+    end
+
 end
